@@ -1,0 +1,41 @@
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/|
+//																											|
+//								ShaderX7. Cross platform rendering thread. 2008.							|
+//				Guillaume Blanc. ELB (Etranges Libellules) http://www.elb-games.com/. Lyon, France.			|
+//																											|
+//	This program is free software. It is distributed in the hope that it will be useful, but without any	|
+//	warranty, without even the implied warranty of merchantability or fitness for a particular purpose.		|
+//																											|
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/|
+#pragma once
+
+#include "sxDriver/Client/sxICommand.h"
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Draw command data.
+class sxCDrawCommandData : public sxICommandData
+{
+public:
+
+	//-------------------------------------------------------------------------------------------------------
+	// Constructor.
+	sxCDrawCommandData()
+	{
+	}
+
+	//-------------------------------------------------------------------------------------------------------
+	// Implement virtual clear function
+	virtual void Clear()
+	{
+	}
+
+	//-------------------------------------------------------------------------------------------------------
+	// Implement virtual copy function
+	virtual void Copy(sxICommandData const& a_rData)
+	{
+	}
+};
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Type of the sxCUTestCommand object built base on the command wrapper helper
+typedef sxCTCommandWrapper<sxCDrawCommandData, sxEFactoryObject::eDrawCommand> sxCDrawCommand;
