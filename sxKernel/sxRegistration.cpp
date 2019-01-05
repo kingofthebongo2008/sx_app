@@ -115,8 +115,7 @@ void sxCRegistrer::CallInitialize()
 
 	// Iterate and call initialize execution
 	sxForEachCallFunctor(	(*m_plRegisteredObjects),
-							bind2nd(	mem_fun1(&sxIRegisteredObject::operator()),
-										sxERegisteredOperation::eInitialize));
+							bind( mem_fn(&sxIRegisteredObject::operator()), _1, sxERegisteredOperation::eInitialize));
 }
 
 //-----------------------------------------------------------------------------------------------------------
@@ -131,6 +130,5 @@ void sxCRegistrer::CallDestroy()
 
 	// Iterate and call destroy execution
 	sxForEachReverseCallFunctor((*m_plRegisteredObjects),
-								bind2nd(	mem_fun1(&sxIRegisteredObject::operator()),
-											sxERegisteredOperation::eDestroy));
+								bind( mem_fn(&sxIRegisteredObject::operator()), _1, sxERegisteredOperation::eDestroy));
 }

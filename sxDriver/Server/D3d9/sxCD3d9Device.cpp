@@ -140,7 +140,7 @@ sxBool sxCD3d9Device::Reset()
 		break;
 		default:
 		{
-			sxAssert(false, sxD3d9GetErrorString(hTest));
+            sxAssert(false, "Error");
 			return false;
 		}
 		break;
@@ -326,13 +326,13 @@ void sxCD3d9Device::OverlayText()
 
 	//---------------------------------
 	// Overlay output text at frame end
-	ostringstream strMessage;
+	wostringstream strMessage;
 
 	// Get a formated message from the current controls
 	sxCControls::GetInstance().Format(strMessage);
 	
 	// Add a separator
-	strMessage << "\n";
+	strMessage << L"\n";
 
 	// Get a formated message from the current statistics
 	rStatistics.Format(strMessage);
@@ -344,7 +344,7 @@ void sxCD3d9Device::OverlayText()
 
 	// Overlay golem text at frame end
 	m_oTextRenderer.Dispatch(	rThis,
-								"The Golem 3d model is available for download at www.elb-games.com",
+								L"The Golem 3d model is available for download at www.elb-games.com",
 								sxCFloat3(1,1,1),
 								true,
 								true);

@@ -46,7 +46,7 @@ private:
 	// Attributes
 
 	// Name of the registered WNDCLASS
-	string m_strRegisteredWndClass;
+	wstring m_strRegisteredWndClass;
 
 	// Application handle
 	HWND m_hDisplayHandle;

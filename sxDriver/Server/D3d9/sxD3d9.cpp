@@ -17,12 +17,8 @@
 #pragma comment(lib, "d3d9.lib")
 
 // Include base d3dx9 lib
-#pragma comment(lib, "d3dx9.lib")
+#pragma comment(lib, "d3dx9_39.lib")
 
-// Includes dx error management library file
-#ifdef __sxD3d9DriverAPIErrorCheck
-#	pragma comment(lib, "dxerr.lib")
-#endif // __sxD3d9DriverAPIErrorCheck
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // sxCD3d9PresentParameter

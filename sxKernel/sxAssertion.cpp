@@ -47,7 +47,7 @@ sxBool sxAssertionFailureReport(sxChar const* szFormat, ...)
 	sxLog(szBuffer);
 
 	// Display the assertion and get user's clicked button
-	sxInt iButton = MessageBox(NULL, szBuffer, "sxApplication: Assertion failed", MB_ABORTRETRYIGNORE);
+	sxInt iButton = MessageBoxA(NULL, szBuffer, "sxApplication: Assertion failed", MB_ABORTRETRYIGNORE);
 
  	// Free message
 	sxFree(szBuffer);

@@ -36,7 +36,7 @@ void sxID3d9ResetWarner::SendPreReset()
 
 	// Iterate through all registered resource and call the release functions
 	sxForEachCallFunctor(	m_lVideoMemoryResources,
-							mem_fun(&sxID3d9ResetListener::PreReset));
+							mem_fn(&sxID3d9ResetListener::PreReset));
 }
 
 //-----------------------------------------------------------------------------------------------------------
@@ -47,7 +47,7 @@ void sxID3d9ResetWarner::SendPostResetSucceed()
 
 	// Iterate through all registered resource and call the release functions
 	sxForEachCallFunctor(	m_lVideoMemoryResources,
-							mem_fun(&sxID3d9ResetListener::PostResetSucceed));
+							mem_fn(&sxID3d9ResetListener::PostResetSucceed));
 }
 
 //-----------------------------------------------------------------------------------------------------------
@@ -58,7 +58,7 @@ void sxID3d9ResetWarner::SendPostResetFailed()
 
 	// Iterate through all registered resource and call the release functions
 	sxForEachCallFunctor(	m_lVideoMemoryResources,
-							mem_fun(&sxID3d9ResetListener::PostResetFailed));
+							mem_fn(&sxID3d9ResetListener::PostResetFailed));
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////

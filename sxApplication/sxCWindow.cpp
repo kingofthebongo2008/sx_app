@@ -24,7 +24,7 @@ sxCWindow::sxCWindow() :
 	HINSTANCE hInstance = GetModuleHandle(NULL);
 
 	// Initialize WNDCLASS name.
-	m_strRegisteredWndClass = "sxCWindows Class Name";
+	m_strRegisteredWndClass = L"sxCWindows Class Name";
 
 	//-------------------------------------
 	// Register window class
@@ -62,7 +62,7 @@ sxCWindow::sxCWindow() :
 
 	// Call windows creation function
 	m_hDisplayHandle = CreateWindow(m_strRegisteredWndClass.c_str(),
-									"sxDeviceThread",
+									L"sxDeviceThread",
 									uiStyle,
 									CW_USEDEFAULT,
 									CW_USEDEFAULT,

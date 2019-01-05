@@ -96,3 +96,53 @@ void sxCDriverStatistics::Format(ostringstream& a_rstrMessage)
 	a_rstrMessage << "-D3d9 calls: " << m_iD3d9CallsPerFrame << '\n';
 	m_iD3d9CallsPerFrame = 0;
 }
+
+//-----------------------------------------------------------------------------------------------------------
+//
+void sxCDriverStatistics::Format(wostringstream& a_rstrMessage)
+{
+    a_rstrMessage << L"-----------------\n";
+    a_rstrMessage << L"Driver statistics\n";
+
+    // Add Client fps
+    a_rstrMessage << L"-Client thread fps: " << m_iaClientFps.GetValue() << L'\n';
+
+    // Add Server fps
+    a_rstrMessage << L"-Server thread fps: ";
+    if (m_iServerFps != -1)
+    {
+        a_rstrMessage << m_iServerFps;
+    }
+    else
+    {
+        a_rstrMessage << L"No loop detected";
+    }
+    a_rstrMessage << L'\n';
+
+    // Add Gpu fps
+    a_rstrMessage << L"-Gpu fps: ";
+    if (m_iGpuFps != -1)
+    {
+        a_rstrMessage << m_iGpuFps;
+    }
+    else
+    {
+        a_rstrMessage << L"Unavailable";
+    }
+    a_rstrMessage << L'\n';
+
+    // Add built commands
+    a_rstrMessage << L"-Command buffer size: " << m_iCommandBufferSize << L" Bytes" << L'\n';
+
+    // Add built commands
+    a_rstrMessage << L"-Built driver commands: " << m_iBuiltCommandsPerFrame << L'\n';
+    m_iBuiltCommandsPerFrame = 0;
+
+    // Add dispatched commands
+    a_rstrMessage << L"-Dispatched driver commands: " << m_iDispatchedCommandsPerFrame << L'\n';
+    m_iDispatchedCommandsPerFrame = 0;
+
+    // Add d3d9 calls and reset call count
+    a_rstrMessage << L"-D3d9 calls: " << m_iD3d9CallsPerFrame << L'\n';
+    m_iD3d9CallsPerFrame = 0;
+}

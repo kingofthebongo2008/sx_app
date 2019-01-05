@@ -34,7 +34,7 @@ void Log(sxChar const* szFormat, ...)
 	strcat_s(szBuffer, stLen, "\n");
 
 	// Output message to debugger
-	OutputDebugString(szBuffer);
+	OutputDebugStringA(szBuffer);
 
 	// Output message to console
 	printf(szBuffer);

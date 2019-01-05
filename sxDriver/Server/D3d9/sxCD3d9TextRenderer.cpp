@@ -26,13 +26,13 @@ sxCD3d9TextRenderer::~sxCD3d9TextRenderer()
 //-----------------------------------------------------------------------------------------------------------
 //
 void sxCD3d9TextRenderer::Dispatch(	sxCD3d9Device& a_rDevice,
-									sxCharCPtr a_szText,
+									sxWCharCPtr a_szText,
 									sxCFloat3 const& a_rf3Color,
 									sxBool a_bBottom,
 									sxBool a_bCentered)
 {
 	// Compute character count
-	sxUInt const uiChracterCount = strlen(a_szText);
+	sxUInt const uiChracterCount = wcslen(a_szText);
 
 	// Early out  if the message is empty
 	if(uiChracterCount == 0)
@@ -54,21 +54,21 @@ void sxCD3d9TextRenderer::Dispatch(	sxCD3d9Device& a_rDevice,
 									OUT_DEFAULT_PRECIS,
 									DEFAULT_QUALITY,
 									DEFAULT_PITCH | FF_DONTCARE,
-									"courier new",
+									L"courier new",
 									sxGetD3d9SmartModifier(m_spFont)));
 
 		// Prepare a string with all the characters that'll be used
-		sxCharCPtr szCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 %-+/*=.,;:";
+		sxWCharCPtr szCharacters = L"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 %-+/*=.,;:";
 		
 		// Prepare character fonts
-		sxD3d9Call(m_spFont->PreloadText(szCharacters, strlen(szCharacters)));
+		sxD3d9Call(m_spFont->PreloadText(szCharacters, wcslen(szCharacters)));
 	}
 
 	// Create a rect of the size of the render target
 	RECT oRect =
 	{	
-		0,
-		0,
+		0U,
+		0U,
 		a_rDevice.GetDeviceWidth(),
 		a_rDevice.GetDeviceHeight()
 	};

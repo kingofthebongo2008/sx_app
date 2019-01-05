@@ -188,3 +188,40 @@ void sxCControls::Format(ostringstream& a_rstrMessage)
 	}
 	a_rstrMessage << '\n';
 }
+
+//-----------------------------------------------------------------------------------------------------------
+//
+void sxCControls::Format(wostringstream& a_rstrMessage)
+{
+    a_rstrMessage << L"--------------------\n";
+    a_rstrMessage << L"Application controls\n";
+
+    // Add buffering mode
+    a_rstrMessage << L"-Buffering mode (key 1/2/3): ";
+    switch (GetBufferingMode())
+    {
+    case sxEBufferingMode::eNoBuffering: a_rstrMessage << L"No buffering"; break;
+    case sxEBufferingMode::eDoubleBuffer: a_rstrMessage << L"Double buffering"; break;
+    case sxEBufferingMode::eTripleBuffer: a_rstrMessage << L"Triple buffering"; break;
+    default: sxAssertUnreachableCode(); break;
+    }
+    a_rstrMessage << L'\n';
+
+    // Add main thread delay
+    a_rstrMessage << L"-Main thread delay (key A/Z): " << m_iaMainThreadDelay << L"ms\n";
+
+    // Add Light count
+    a_rstrMessage << L"-Light count (key +/-): " << m_iaLightCount.GetValue() << L'\n';
+
+    // Add dummy light enabled flag
+    a_rstrMessage << L"-Dummy lights (key D): ";
+    if (IsDummyLightRenderingEnabled())
+    {
+        a_rstrMessage << L"enabled";
+    }
+    else
+    {
+        a_rstrMessage << L"disabled";
+    }
+    a_rstrMessage << L'\n';
+}

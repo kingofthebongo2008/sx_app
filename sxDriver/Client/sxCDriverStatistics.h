@@ -27,6 +27,10 @@ public:
 	// Format statistics for display
 	void Format(ostringstream& a_rstrMessage);
 
+    //-------------------------------------------------------------------------------------------------------
+    // Format statistics for display
+    void Format(wostringstream& a_rstrMessage);
+
 	//-------------------------------------------------------------------------------------------------------
 	// Reset counter
 	void Reset();

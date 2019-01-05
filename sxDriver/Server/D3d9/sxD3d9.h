@@ -69,14 +69,16 @@ typedef sxCTComPtr<ID3DXFont>::sxCType sxID3DXFontPtr;
 #ifdef __sxD3d9DriverAPIErrorCheck
 
 // Define a D3d9 error message format
-#define sxD3d9GetErrorString(x_hRes) DXGetErrorDescription(x_hRes)
+#define sxD3d9GetErrorString(x_hRes,x_msg,x_count) DXGetErrorDescription(x_hRes,x_msg,x_count)
 
 // Define a D3d9 function call macro that tests return error code
 #define sxD3d9Call(x_function)\
 {\
 	sxCDriverStatistics::GetInstance().IncD3d9CallsPerFrame();\
 	HRESULT _hRes = x_function;\
-	sxAssert(SUCCEEDED(_hRes), "%s\n%s", #x_function, sxD3d9GetErrorString(_hRes));\
+    TCHAR   _msg[1024];\
+    sxD3d9GetErrorString(_hRes,_msg,1024);\
+	sxAssert(SUCCEEDED(_hRes), "%s\n%S", #x_function,_msg);\
 }__noop()
 
 // Define a D3d9 function call macro that tests return error code. In a device lost case, it notifies the renderer
@@ -90,7 +92,9 @@ typedef sxCTComPtr<ID3DXFont>::sxCType sxID3DXFontPtr;
 	}\
 	else\
 	{\
-		sxAssert(SUCCEEDED(_hRes), "%s\n%s", #x_function, sxD3d9GetErrorString(_hRes));\
+        TCHAR   _msg[1024];\
+        sxD3d9GetErrorString(_hRes,_msg,1024);\
+		sxAssert(SUCCEEDED(_hRes), "%s\n%S", #x_function, _msg);\
 	}\
 }__noop()
 

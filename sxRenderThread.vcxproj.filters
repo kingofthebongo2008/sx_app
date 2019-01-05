@@ -270,6 +270,9 @@
     <ClCompile Include="sxDriver\Client\UTest\sxCStateCacheUTest.cpp">
       <Filter>sxDriver\Client\UTest</Filter>
     </ClCompile>
+    <ClCompile Include="sxDriver\Server\D3d9\dxerr.cpp">
+      <Filter>sxDriver\Server\D3d9</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sxApplication\sxCControls.h">
@@ -478,6 +481,9 @@
     </ClInclude>
     <ClInclude Include="sxDriver\Client\Command\UTest\sxCUTestCommand.h">
       <Filter>sxDriver\Client\Command\UTest</Filter>
+    </ClInclude>
+    <ClInclude Include="sxDriver\Server\D3d9\dxerr.h">
+      <Filter>sxDriver\Server\D3d9</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

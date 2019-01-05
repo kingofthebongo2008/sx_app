@@ -30,7 +30,7 @@ public:
 	//-------------------------------------------------------------------------------------------------------
 	// Render the specified text on the top left corner of the window
 	void Dispatch(	class sxCD3d9Device& a_rDevice,
-					sxCharCPtr a_szText,
+					sxWCharCPtr a_szText,
 					sxCFloat3 const& a_rf3Color,
 					sxBool a_bBottom = false,
 					sxBool a_bCentered = false);

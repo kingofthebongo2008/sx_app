@@ -33,6 +33,9 @@ public:
 	// Format control message
 	void Format(ostringstream& a_rstrMessage);
 
+    // Format control message
+    void Format(wostringstream& a_rstrMessage);
+
 	//-------------------------------------------------------------------------------------------------------
 	// Modify control
 	void Control(sxUInt a_uiKey, sxBool a_bKeyUp);
