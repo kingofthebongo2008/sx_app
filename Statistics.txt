@@ -1,0 +1,28 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Statistics
+
+Some statistics are collected and displayed during application update and rendering:
+
+-	Client thread Fps: measures the frame rate of the client update loop. This loop includes every rendering 
+call to the driver.
+
+-	Server thread Fps: measures the frame rate of the server thread loop. This loop executes all the platform 
+graphic API calls. This counter isn’t valid when the synchronous command buffer is used, as the server thread 
+is unused in this case.
+
+-	Gpu theoretical Fps: This counter measures the time the Gpu spent executing rendering, ie: the execution 
+of all the graphic API commands executed by the Gpu. It uses a query mechanism that isn’t available on all 
+hardware, and thus can be invalid.
+
+-	Command buffer size: The memory footprint of the command buffer of the displayed frame.
+
+-	Built commands count: Represent the number of commands (including states), that were modified and executed 
+during the frame. Before being dispatched on the server side, modified commands are built once. In 
+this demo, sxCTransformState, sxCMaterialState and sxCRenderTargetState are modified during the update (on 
+the client side).
+
+-	Dispatched commands count: The number of commands (including states) that are dispatched on the server 
+side during frame execution.
+
+-	D3d9 calls count: The number of calls to the D3d9 graphic API. The comparison between this count and the 
+dispatched commands count outlines the one-to-many concept.

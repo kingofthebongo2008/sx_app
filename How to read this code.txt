@@ -1,0 +1,81 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// HOW TO READ THIS CODE
+
+This file explains the solution structure and points out code sections that should particulary be seen in 
+order to complete ShaderX7 article reading.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Project structure
+
+The project is a Microsoft Visual Studio 2008 Express solution, separated into 3 main directories:
+1. sxApplication which is where the main is located and the window created. But most of all, it's where the 
+driver is used and thus, it demonstrates how states and command can be locked, modified, queued...
+2. sxKernel which contains every little tools that help me developing this demo:
+	- Threading (sxCMutex.h, sxCCondition.h, sxCThread.h, sxCAtomicInt.h...)
+	- Smart pointers (sxCTSmartPtr.h)
+	- Unit tests framework (sxUnitTest.h)
+	- Memory management
+	- Loging
+	- ...
+3. sxDriver is seperated into a Client and a Server folders.
+	- The Client folder contains the driver interface exposed to the client user through command and 
+	state objects. It also implements the command buffer and state cache objects.
+	- The Server folder contains a bit more directories. The Interface one implements the code the can be 
+	used by the driver lient side. Then every API has its own directory (D3d9, OpenGL), as well as a UTest 
+	directory that behaves as one of the API.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Unit tests
+
+The source code is provided with the unit tests that were written and used during the development. sxKernel 
+unit tests can be found directly at the end of the class that they are testing. sxDriver unit tests are 
+located in seperate files. Unit tests can be ran using its specific configuration, based on the debug version.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Driver use cases
+
+sxCMain (sxApplication/sxCMain.h and sxApplication/sxCMain.cpp) class centralized driver usage cases. This 
+class aims to demonstrate the different possible way to use the driver, and is composed of 3 important parts:
+	- Set up: State initilisation, window, ...
+	- Update: time, light positions, ...
+	- Render: The Golem, light dummies, ...
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Code section: Command locking
+
+Command locking is based on the raii pattern in order to ensure locking-unlocking symmetry. Related code 
+sections can be found in class sxCTReadOnlyLocker in sxCCommandLocker.h file. Many use cases can be found in 
+sxCMain.h and sxCMain.cpp files. A more complex case is the state cache entry inheritance (class sxCCacheEntry
+in sxCStateCache.h file), which makes a different use of this locking pattern.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Code section: Command data duplication decision algorithm
+
+A new Command data object is allocated (or reused from previous frames) every time a command is locked for 
+read-write while it is already locked for read-only. This is implemented based on a wait free algorithm that 
+is located in the sxICommand.cpp file in function sxICommand::GrabReadWriteData().
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Code section: Redundant state filtering
+
+Client state cache filtering is implemented by comparing the current cache entry to the newly bound state. 
+This decision algorithm can be found in sxCStateCache.cpp file in the function sxCCacheEntry::operator != ().
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Code section: Server thread
+
+Server thread entry function is located in sxCCommandBuffer.cpp file and is named ServerFlushFunction. This 
+function handles double and triple buffering solutions. The synchonous un-buffered solution does not use this
+thread but rather execute commands immediately (sxCCommandBuffer::_Queue() in sxCCommandBuffer.cpp file).
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Code section: Driver object pattern
+
+sxIObject.h file implement the driver object pattern (sxIObject), along with its server version sxIServerObject: 
+sxIServerObject.h. A factory is used between the two driver sides in order to allocate server objects 
+(sxIServerFactory.h and sxCFactorySelector.h).
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Model (Golem)
+
+The Golem 3d model is available for download at www.elb-games.com (high def, coarse mesh & displacement map, ...).

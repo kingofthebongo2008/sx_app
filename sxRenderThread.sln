@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sxRenderThread", "sxRenderThread.vcproj", "{63D02202-1B58-4520-8ECB-C60FC68187AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug-UnitTest|Win32 = Debug-UnitTest|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63D02202-1B58-4520-8ECB-C60FC68187AE}.Debug-UnitTest|Win32.ActiveCfg = Debug-UnitTest|Win32
+		{63D02202-1B58-4520-8ECB-C60FC68187AE}.Debug-UnitTest|Win32.Build.0 = Debug-UnitTest|Win32
+		{63D02202-1B58-4520-8ECB-C60FC68187AE}.Release|Win32.ActiveCfg = Release|Win32
+		{63D02202-1B58-4520-8ECB-C60FC68187AE}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

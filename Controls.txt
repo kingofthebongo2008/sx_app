@@ -1,0 +1,23 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Controls
+
+A few controls are available in order to bring out the interesting behaviours. The following list enumerates 
+the controls and their effect on the application.
+
+-	1/2/3 : Choose the buffering mode between
+	- No buffering: Synchronous rendering, by passing the command buffer. Server thread is sleeping in this mode.
+	- Double buffer: Asynchronous rendering using a double buffer between the client and the server threads.
+	- Triple buffer: Asynchronous rendering using a triple buffer between the client and the server threads.
+ 
+-	+/- : Increase/decrease the number of lights. This can be used in order to increase scene complexity. Even 
+if the client and the server thread are affected by this tuning, it mostly influences Gpu frame rate.
+
+-	D : Hide/Display light dummies. The light dummies rendering is done by the application, using the driver 
+API. Thus enabling this option increase command buffer usage and the number of locked and built commands. As 
+the light dummy model (a sphere) is quite small, it doesn’t influence a lot the Gpu frame rate, but rather 
+the client and server threads.
+
+-	A/Z : Introduce a delay in the main loop (client thread). This can be used to slow done the loop in order 
+to simulate game update time. Notice that server thread fps will never be higher than the client one.
+
+-	R : Reset to default controls.
