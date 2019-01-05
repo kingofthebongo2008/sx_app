@@ -13,7 +13,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Application main window.
-class sxCWindow : sxITSingleton<sxCWindow>
+class sxCWindow : public sxITSingleton<sxCWindow>
 {
 public:
 	//-------------------------------------------------------------------------------------------------------

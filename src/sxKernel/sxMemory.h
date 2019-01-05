@@ -51,7 +51,8 @@ inline void sxDelete(t_Object& a_rObject)
 template <typename t_Object>
 inline void sxDelete(t_Object*)
 {
-	sxStaticAssert(false, sxDelete_should_not_be_called_on_a_pointer_unless_it_is_an_array);
+    static_assert(false);
+	//sxStaticAssert(false, sxDelete_should_not_be_called_on_a_pointer_unless_it_is_an_array);
 }
 
 } // sxNsMemory

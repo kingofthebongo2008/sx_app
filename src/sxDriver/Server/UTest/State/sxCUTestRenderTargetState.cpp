@@ -1,10 +1,10 @@
 //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/|
-//																											|
-//						Guillaume Blanc. ELB (Etranges Libellules). Lyon FRANCE. 2008.						|
-//								ShaderX7. Cross platform rendering thread									|
-//																											|
+//                                                                                                          |
+//                      Guillaume Blanc. ELB (Etranges Libellules). Lyon FRANCE. 2008.                      |
+//                              ShaderX7. Cross platform rendering thread                                   |
+//                                                                                                          |
 //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/|
-#include "sxKernel/sxPcHeader.h"
+#include "pch.h"
 
 #ifdef __sxBuildUTest
 
@@ -14,23 +14,23 @@
 
 //-----------------------------------------------------------------------------------------------------------
 //
-void sxCUTestRenderTargetState::Build(	sxICommandData const& a_rData,
-										class sxIServerDevice& a_rDevice)
+void sxCUTestRenderTargetState::Build(  sxICommandData const& a_rData,
+                                        class sxIServerDevice& a_rDevice)
 {
-	sxCRenderTargetStateData const& rData = (sxCRenderTargetStateData const&)a_rData;
+    sxCRenderTargetStateData const& rData = (sxCRenderTargetStateData const&)a_rData;
 
-	m_uiBuiltValue = rData.GetWidth();
+    m_uiBuiltValue = rData.GetWidth();
 }
 
 //-----------------------------------------------------------------------------------------------------------
 //
-void sxCUTestRenderTargetState::Dispatch(	sxICommandData const& a_rData,
-											class sxIServerDevice& a_rDevice)
+void sxCUTestRenderTargetState::Dispatch(   sxICommandData const& a_rData,
+                                            class sxIServerDevice& a_rDevice)
 {
-	sxCRenderTargetStateData const& rData = (sxCRenderTargetStateData const&)a_rData;
+    sxCRenderTargetStateData const& rData = (sxCRenderTargetStateData const&)a_rData;
 
-	sxUTest(m_uiBuiltValue == rData.GetWidth());
-	sxCUTestCheckServerCommand::SetValueToTest(m_uiBuiltValue);
+    sxUTest(m_uiBuiltValue == rData.GetWidth());
+    sxCUTestCheckServerCommand::SetValueToTest(m_uiBuiltValue);
 }
 
 #endif // __sxBuildUTest
