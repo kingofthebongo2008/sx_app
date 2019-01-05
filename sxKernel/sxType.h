@@ -48,8 +48,17 @@ typedef bool sxBool;
 // Character type
 typedef char sxChar;
 
+// Character type
+typedef wchar_t sxWChar;
+
 // Null terminated string
 typedef sxChar* sxCharPtr;
 
 // Null terminated const string
 typedef sxChar const* sxCharCPtr;
+
+// Null terminated string
+typedef sxWChar* sxWCharPtr;
+
+// Null terminated const string
+typedef sxWChar const* sxWCharCPtr;
