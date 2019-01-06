@@ -13,7 +13,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // D3d9 Server object factory.
-class sxCD3d9Factory : public sxITServerFactoryWrapper<sxCD3d9Factory>
+class sxCD3d9Factory final : public sxITServerFactoryWrapper<sxCD3d9Factory>
 {
 public:
 

@@ -13,7 +13,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Swap d3d9 server command object. Used as the d3d9 specialisation of sxCSwapCommand.
-class sxCD3d9SwapCommand : public sxIServerCommand
+class sxCD3d9SwapCommand final : public sxIServerCommand
 {
 protected:
 

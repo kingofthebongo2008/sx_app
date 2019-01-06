@@ -16,7 +16,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // D3d9 Gpu timer. Measures the elapsed time on the Gpu between two Begin/End calls. It uses d3d9 queries to
 // insert events in the d3d9 command buffer.
-class sxCD3d9GpuTimer : public sxID3d9ResetListener
+class sxCD3d9GpuTimer final : public sxID3d9ResetListener
 {
 public:
 

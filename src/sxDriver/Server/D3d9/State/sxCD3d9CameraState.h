@@ -14,7 +14,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Camera d3d9 server state object. Used as the d3d9 specialisation of sxCCameraState.
-class sxCD3d9CameraState : public sxIServerState
+class sxCD3d9CameraState final : public sxIServerState
 {
 protected:
 

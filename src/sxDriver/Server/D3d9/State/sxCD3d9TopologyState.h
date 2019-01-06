@@ -14,7 +14,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Topology d3d9 server state object. Used as the d3d9 specialisation of sxCTopologyState.
-class sxCD3d9TopologyState : public sxIServerState
+class sxCD3d9TopologyState final : public sxIServerState
 {
 public:
 

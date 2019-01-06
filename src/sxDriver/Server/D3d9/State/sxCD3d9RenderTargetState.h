@@ -14,7 +14,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Render target d3d9 server state object. Used as the d3d9 specialisation of sxCRenderTargetState.
-class sxCD3d9RenderTargetState : public sxIServerState
+class sxCD3d9RenderTargetState final : public sxIServerState
 {
 protected:
 

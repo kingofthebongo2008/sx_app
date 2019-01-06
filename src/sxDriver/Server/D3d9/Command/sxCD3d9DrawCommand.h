@@ -13,7 +13,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Draw d3d9 server command object. Used as the d3d9 specialisation of sxCDrawCommand.
-class sxCD3d9DrawCommand : public sxIServerCommand
+class sxCD3d9DrawCommand final : public sxIServerCommand
 {
 protected:
 

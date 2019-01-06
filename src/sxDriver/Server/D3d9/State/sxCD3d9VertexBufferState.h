@@ -14,7 +14,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Vertex buffer d3d9 server state object. Used as the d3d9 specialisation of sxCVertexBufferState.
-class sxCD3d9VertexBufferState : public sxIServerState
+class sxCD3d9VertexBufferState final : public sxIServerState
 {
 public:
 

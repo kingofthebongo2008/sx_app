@@ -14,7 +14,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Transform d3d9 server state object. Used as the d3d9 specialisation of sxCTransformState.
-class sxCD3d9TransformState : public sxIServerState
+class sxCD3d9TransformState final : public sxIServerState
 {
 protected:
 

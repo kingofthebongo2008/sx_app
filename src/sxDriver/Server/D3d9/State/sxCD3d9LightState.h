@@ -14,7 +14,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Light d3d9 server state object. Used as the d3d9 specialisation of sxCLightState.
-class sxCD3d9LightState : public sxIServerState
+class sxCD3d9LightState final : public sxIServerState
 {
 protected:
 	

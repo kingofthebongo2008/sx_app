@@ -15,7 +15,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Driver D3d9 server text output object
-class sxCD3d9TextRenderer : protected sxID3d9ResetListener, private sxINonCopyable
+class sxCD3d9TextRenderer final : protected sxID3d9ResetListener, private sxINonCopyable
 {
 public:
 
