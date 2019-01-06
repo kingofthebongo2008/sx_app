@@ -10,7 +10,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Vertex buffer state data. Stores vertices information in a fixed format for simplicity.
-class sxCVertexBufferStateData : public sxIStateData
+class sxCVertexBufferStateData final : public sxIStateData
 {
 public:
 

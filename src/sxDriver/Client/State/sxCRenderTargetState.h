@@ -14,7 +14,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Render target state command data. Embeds render target sizes and clear color. This clear color information
 // might not be a real-world case but rather demonstrates the one-to-many abstraction design.
-class sxCRenderTargetStateData : public sxIStateData
+class sxCRenderTargetStateData final : public sxIStateData
 {
 public:
 

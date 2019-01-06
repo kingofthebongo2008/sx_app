@@ -13,7 +13,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Material state command data.
-class sxCMaterialStateData : public sxIStateData
+class sxCMaterialStateData final : public sxIStateData
 {
 public:
 

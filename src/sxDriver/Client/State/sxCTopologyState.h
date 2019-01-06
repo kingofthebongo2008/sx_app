@@ -13,7 +13,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Topology state data. This class is limited to indexed triangles primitive type for the example purpose.
-class sxCTopologyStateData : public sxIStateData
+class sxCTopologyStateData final : public sxIStateData
 {
 public:
 

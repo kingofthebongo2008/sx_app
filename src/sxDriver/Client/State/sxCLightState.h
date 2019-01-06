@@ -72,7 +72,7 @@ private:
 	
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Light state command data.
-class sxCLightStateData : public sxIStateData
+class sxCLightStateData final: public sxIStateData
 {
 public:
 
