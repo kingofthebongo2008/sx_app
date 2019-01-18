@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src" />
+    <Filter Include="src\pch" />
+    <Filter Include="src\sxApplication" />
+    <Filter Include="src\sxDriver" />
+    <Filter Include="src\sxDriver\Client" />
+    <Filter Include="src\sxDriver\Client\Command" />
+    <Filter Include="src\sxDriver\Client\Command\UTest" />
+    <Filter Include="src\sxDriver\Client\State" />
+    <Filter Include="src\sxDriver\Server" />
+    <Filter Include="src\sxDriver\Server\D3d9" />
+    <Filter Include="src\sxDriver\Server\D3d9\Command" />
+    <Filter Include="src\sxDriver\Server\D3d9\State" />
+    <Filter Include="src\sxDriver\Server\Interface" />
+    <Filter Include="src\sxDriver\Server\UTest" />
+    <Filter Include="src\sxDriver\Server\UTest\Command" />
+    <Filter Include="src\sxDriver\Server\UTest\State" />
+    <Filter Include="src\sxKernel" />
+    <Filter Include="src\sxKernel\Math" />
+    <Filter Include="src\sxKernel\Thread" />
+    <Filter Include="src\sxKernel\UnitTest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\pch\pch.h">
+      <Filter>src\pch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxApplication\sxCControls.h">
+      <Filter>src\sxApplication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxApplication\sxCMain.h">
+      <Filter>src\sxApplication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxApplication\sxCMesh.h">
+      <Filter>src\sxApplication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxApplication\sxCWindow.h">
+      <Filter>src\sxApplication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Client\Command\UTest\sxCUTestCommand.h">
+      <Filter>src\sxDriver\Client\Command\UTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Client\Command\sxCDrawCommand.h">
+      <Filter>src\sxDriver\Client\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Client\Command\sxCSwapCommand.h">
+      <Filter>src\sxDriver\Client\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Client\State\sxCCameraState.h">
+      <Filter>src\sxDriver\Client\State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Client\State\sxCLightState.h">
+      <Filter>src\sxDriver\Client\State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Client\State\sxCMaterialState.h">
+      <Filter>src\sxDriver\Client\State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Client\State\sxCRenderTargetState.h">
+      <Filter>src\sxDriver\Client\State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Client\State\sxCTopologyState.h">
+      <Filter>src\sxDriver\Client\State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Client\State\sxCTransformState.h">
+      <Filter>src\sxDriver\Client\State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Client\State\sxCVertexBufferState.h">
+      <Filter>src\sxDriver\Client\State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Client\sxCCommandBuffer.h">
+      <Filter>src\sxDriver\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Client\sxCCommandLocker.h">
+      <Filter>src\sxDriver\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Client\sxCContext.h">
+      <Filter>src\sxDriver\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Client\sxCDevice.h">
+      <Filter>src\sxDriver\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Client\sxCDriverStatistics.h">
+      <Filter>src\sxDriver\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Client\sxCFactorySelector.h">
+      <Filter>src\sxDriver\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Client\sxCStateCache.h">
+      <Filter>src\sxDriver\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Client\sxEStateType.h">
+      <Filter>src\sxDriver\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Client\sxICommand.h">
+      <Filter>src\sxDriver\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Client\sxIObject.h">
+      <Filter>src\sxDriver\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Client\sxIState.h">
+      <Filter>src\sxDriver\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\D3d9\Command\sxCD3d9DrawCommand.h">
+      <Filter>src\sxDriver\Server\D3d9\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\D3d9\Command\sxCD3d9SwapCommand.h">
+      <Filter>src\sxDriver\Server\D3d9\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\D3d9\State\sxCD3d9CameraState.h">
+      <Filter>src\sxDriver\Server\D3d9\State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\D3d9\State\sxCD3d9LightState.h">
+      <Filter>src\sxDriver\Server\D3d9\State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\D3d9\State\sxCD3d9MaterialState.h">
+      <Filter>src\sxDriver\Server\D3d9\State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\D3d9\State\sxCD3d9RenderTargetState.h">
+      <Filter>src\sxDriver\Server\D3d9\State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\D3d9\State\sxCD3d9TopologyState.h">
+      <Filter>src\sxDriver\Server\D3d9\State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\D3d9\State\sxCD3d9TransformState.h">
+      <Filter>src\sxDriver\Server\D3d9\State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\D3d9\State\sxCD3d9VertexBufferState.h">
+      <Filter>src\sxDriver\Server\D3d9\State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\D3d9\dxerr.h">
+      <Filter>src\sxDriver\Server\D3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\D3d9\sxCD3d9Device.h">
+      <Filter>src\sxDriver\Server\D3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\D3d9\sxCD3d9Factory.h">
+      <Filter>src\sxDriver\Server\D3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\D3d9\sxCD3d9GpuTimer.h">
+      <Filter>src\sxDriver\Server\D3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\D3d9\sxCD3d9StateShadow.h">
+      <Filter>src\sxDriver\Server\D3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\D3d9\sxCD3d9TextRenderer.h">
+      <Filter>src\sxDriver\Server\D3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\D3d9\sxD3d9.h">
+      <Filter>src\sxDriver\Server\D3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\D3d9\sxID3d9ResetListener.h">
+      <Filter>src\sxDriver\Server\D3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\Interface\sxIServerCommand.h">
+      <Filter>src\sxDriver\Server\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\Interface\sxIServerDevice.h">
+      <Filter>src\sxDriver\Server\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\Interface\sxIServerFactory.h">
+      <Filter>src\sxDriver\Server\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\Interface\sxIServerObject.h">
+      <Filter>src\sxDriver\Server\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\Interface\sxIServerState.h">
+      <Filter>src\sxDriver\Server\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\UTest\Command\sxCUTestServerCommand.h">
+      <Filter>src\sxDriver\Server\UTest\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\UTest\State\sxCUTestDefaultServerState.h">
+      <Filter>src\sxDriver\Server\UTest\State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\UTest\State\sxCUTestRenderTargetState.h">
+      <Filter>src\sxDriver\Server\UTest\State</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\UTest\sxCUTestDevice.h">
+      <Filter>src\sxDriver\Server\UTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxDriver\Server\UTest\sxCUTestFactory.h">
+      <Filter>src\sxDriver\Server\UTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxKernel\Math\sxCFloat3.h">
+      <Filter>src\sxKernel\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxKernel\Math\sxCFloat4.h">
+      <Filter>src\sxKernel\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxKernel\Math\sxMath.h">
+      <Filter>src\sxKernel\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxKernel\Thread\sxCAtomicInt.h">
+      <Filter>src\sxKernel\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxKernel\Thread\sxCCondition.h">
+      <Filter>src\sxKernel\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxKernel\Thread\sxCMutex.h">
+      <Filter>src\sxKernel\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxKernel\Thread\sxCThread.h">
+      <Filter>src\sxKernel\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxKernel\UnitTest\sxUnitTest.h">
+      <Filter>src\sxKernel\UnitTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxKernel\sxAssertion.h">
+      <Filter>src\sxKernel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxKernel\sxCTSmartPtr.h">
+      <Filter>src\sxKernel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxKernel\sxCTime.h">
+      <Filter>src\sxKernel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxKernel\sxIMain.h">
+      <Filter>src\sxKernel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxKernel\sxIObject.h">
+      <Filter>src\sxKernel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxKernel\sxITSingleton.h">
+      <Filter>src\sxKernel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxKernel\sxLog.h">
+      <Filter>src\sxKernel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxKernel\sxMemory.h">
+      <Filter>src\sxKernel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxKernel\sxRegistration.h">
+      <Filter>src\sxKernel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sxKernel\sxType.h">
+      <Filter>src\sxKernel</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="3rdparty" />
+    <Filter Include="3rdparty\dxsdk" />
+    <Filter Include="3rdparty\dxsdk\include" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\3rdparty\dxsdk\include\d3dx9.h">
+      <Filter>3rdparty\dxsdk\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\dxsdk\include\d3dx9anim.h">
+      <Filter>3rdparty\dxsdk\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\dxsdk\include\d3dx9core.h">
+      <Filter>3rdparty\dxsdk\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\dxsdk\include\d3dx9effect.h">
+      <Filter>3rdparty\dxsdk\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\dxsdk\include\d3dx9math.h">
+      <Filter>3rdparty\dxsdk\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\dxsdk\include\d3dx9mesh.h">
+      <Filter>3rdparty\dxsdk\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\dxsdk\include\d3dx9shader.h">
+      <Filter>3rdparty\dxsdk\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\dxsdk\include\d3dx9shape.h">
+      <Filter>3rdparty\dxsdk\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\dxsdk\include\d3dx9tex.h">
+      <Filter>3rdparty\dxsdk\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\dxsdk\include\d3dx9xof.h">
+      <Filter>3rdparty\dxsdk\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src" />
+    <Filter Include="src\pch" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\pch\pch.cpp">
+      <Filter>src\pch</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src" />
+    <Filter Include="src\sxApplication" />
+    <Filter Include="src\sxDriver" />
+    <Filter Include="src\sxDriver\Client" />
+    <Filter Include="src\sxDriver\Client\Command" />
+    <Filter Include="src\sxDriver\Client\Command\UTest" />
+    <Filter Include="src\sxDriver\Client\State" />
+    <Filter Include="src\sxDriver\Client\UTest" />
+    <Filter Include="src\sxDriver\Server" />
+    <Filter Include="src\sxDriver\Server\D3d9" />
+    <Filter Include="src\sxDriver\Server\D3d9\Command" />
+    <Filter Include="src\sxDriver\Server\D3d9\State" />
+    <Filter Include="src\sxDriver\Server\Interface" />
+    <Filter Include="src\sxDriver\Server\UTest" />
+    <Filter Include="src\sxDriver\Server\UTest\Command" />
+    <Filter Include="src\sxDriver\Server\UTest\State" />
+    <Filter Include="src\sxKernel" />
+    <Filter Include="src\sxKernel\Math" />
+    <Filter Include="src\sxKernel\Thread" />
+    <Filter Include="src\sxKernel\UnitTest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\sxApplication\sxCControls.cpp">
+      <Filter>src\sxApplication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxApplication\sxCMain.cpp">
+      <Filter>src\sxApplication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxApplication\sxCMesh.cpp">
+      <Filter>src\sxApplication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxApplication\sxCWindow.cpp">
+      <Filter>src\sxApplication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxApplication\sxMain.cpp">
+      <Filter>src\sxApplication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\Command\UTest\sxCUTestCommand.cpp">
+      <Filter>src\sxDriver\Client\Command\UTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\Command\sxCDrawCommand.cpp">
+      <Filter>src\sxDriver\Client\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\Command\sxCSwapCommand.cpp">
+      <Filter>src\sxDriver\Client\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\State\sxCCameraState.cpp">
+      <Filter>src\sxDriver\Client\State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\State\sxCLightState.cpp">
+      <Filter>src\sxDriver\Client\State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\State\sxCMaterialState.cpp">
+      <Filter>src\sxDriver\Client\State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\State\sxCRenderTargetState.cpp">
+      <Filter>src\sxDriver\Client\State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\State\sxCTopologyState.cpp">
+      <Filter>src\sxDriver\Client\State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\State\sxCTransformState.cpp">
+      <Filter>src\sxDriver\Client\State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\State\sxCVertexBufferState.cpp">
+      <Filter>src\sxDriver\Client\State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\UTest\sxCCommandBufferUTest.cpp">
+      <Filter>src\sxDriver\Client\UTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\UTest\sxCCommandLockerUTest.cpp">
+      <Filter>src\sxDriver\Client\UTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\UTest\sxCDeviceUTest.cpp">
+      <Filter>src\sxDriver\Client\UTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\UTest\sxCStateCacheUTest.cpp">
+      <Filter>src\sxDriver\Client\UTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\sxCCommandBuffer.cpp">
+      <Filter>src\sxDriver\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\sxCCommandLocker.cpp">
+      <Filter>src\sxDriver\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\sxCContext.cpp">
+      <Filter>src\sxDriver\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\sxCDevice.cpp">
+      <Filter>src\sxDriver\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\sxCDriverStatistics.cpp">
+      <Filter>src\sxDriver\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\sxCFactorySelector.cpp">
+      <Filter>src\sxDriver\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\sxCStateCache.cpp">
+      <Filter>src\sxDriver\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\sxICommand.cpp">
+      <Filter>src\sxDriver\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\sxIObject.cpp">
+      <Filter>src\sxDriver\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Client\sxIState.cpp">
+      <Filter>src\sxDriver\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\D3d9\Command\sxCD3d9DrawCommand.cpp">
+      <Filter>src\sxDriver\Server\D3d9\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\D3d9\Command\sxCD3d9SwapCommand.cpp">
+      <Filter>src\sxDriver\Server\D3d9\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\D3d9\State\sxCD3d9CameraState.cpp">
+      <Filter>src\sxDriver\Server\D3d9\State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\D3d9\State\sxCD3d9LightState.cpp">
+      <Filter>src\sxDriver\Server\D3d9\State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\D3d9\State\sxCD3d9MaterialState.cpp">
+      <Filter>src\sxDriver\Server\D3d9\State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\D3d9\State\sxCD3d9RenderTargetState.cpp">
+      <Filter>src\sxDriver\Server\D3d9\State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\D3d9\State\sxCD3d9TopologyState.cpp">
+      <Filter>src\sxDriver\Server\D3d9\State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\D3d9\State\sxCD3d9TransformState.cpp">
+      <Filter>src\sxDriver\Server\D3d9\State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\D3d9\State\sxCD3d9VertexBufferState.cpp">
+      <Filter>src\sxDriver\Server\D3d9\State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\D3d9\dxerr.cpp">
+      <Filter>src\sxDriver\Server\D3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\D3d9\sxCD3d9Device.cpp">
+      <Filter>src\sxDriver\Server\D3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\D3d9\sxCD3d9Factory.cpp">
+      <Filter>src\sxDriver\Server\D3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\D3d9\sxCD3d9GpuTimer.cpp">
+      <Filter>src\sxDriver\Server\D3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\D3d9\sxCD3d9StateShadow.cpp">
+      <Filter>src\sxDriver\Server\D3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\D3d9\sxCD3d9TextRenderer.cpp">
+      <Filter>src\sxDriver\Server\D3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\D3d9\sxD3d9.cpp">
+      <Filter>src\sxDriver\Server\D3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\D3d9\sxID3d9ResetListener.cpp">
+      <Filter>src\sxDriver\Server\D3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\Interface\sxIServerCommand.cpp">
+      <Filter>src\sxDriver\Server\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\Interface\sxIServerDevice.cpp">
+      <Filter>src\sxDriver\Server\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\Interface\sxIServerFactory.cpp">
+      <Filter>src\sxDriver\Server\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\Interface\sxIServerObject .cpp">
+      <Filter>src\sxDriver\Server\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\Interface\sxIServerState.cpp">
+      <Filter>src\sxDriver\Server\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\UTest\Command\sxCUTestServerCommand.cpp">
+      <Filter>src\sxDriver\Server\UTest\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\UTest\State\sxCUTestRenderTargetState.cpp">
+      <Filter>src\sxDriver\Server\UTest\State</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\UTest\sxCUTestDevice.cpp">
+      <Filter>src\sxDriver\Server\UTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxDriver\Server\UTest\sxCUTestFactory.cpp">
+      <Filter>src\sxDriver\Server\UTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxKernel\Math\sxCFloat3.cpp">
+      <Filter>src\sxKernel\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxKernel\Math\sxCFloat4.cpp">
+      <Filter>src\sxKernel\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxKernel\Thread\sxCAtomicInt.cpp">
+      <Filter>src\sxKernel\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxKernel\Thread\sxCCondition.cpp">
+      <Filter>src\sxKernel\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxKernel\Thread\sxCMutex.cpp">
+      <Filter>src\sxKernel\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxKernel\Thread\sxCThread.cpp">
+      <Filter>src\sxKernel\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxKernel\UnitTest\sxUnitTest.cpp">
+      <Filter>src\sxKernel\UnitTest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxKernel\sxAssertion.cpp">
+      <Filter>src\sxKernel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxKernel\sxCTSmartPtr.cpp">
+      <Filter>src\sxKernel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxKernel\sxCTime.cpp">
+      <Filter>src\sxKernel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxKernel\sxIMain.cpp">
+      <Filter>src\sxKernel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxKernel\sxLog.cpp">
+      <Filter>src\sxKernel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxKernel\sxMemory.cpp">
+      <Filter>src\sxKernel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sxKernel\sxRegistration.cpp">
+      <Filter>src\sxKernel</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(D3d9XDirectory)\bin\d3dx9_39.dll" />
+  </ItemGroup>
+</Project>

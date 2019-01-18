@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"> 
+
+<ItemGroup>	
+<ClCompile Include = "..\src\pch\pch.cpp"><PrecompiledHeader>Create</PrecompiledHeader></ClCompile>
+</ItemGroup>
+<ItemGroup>	
+<ClCompile Include = "..\src\sxApplication\sxCControls.cpp" />	
+<ClCompile Include = "..\src\sxApplication\sxCMain.cpp" />	
+<ClCompile Include = "..\src\sxApplication\sxCMesh.cpp" />	
+<ClCompile Include = "..\src\sxApplication\sxCWindow.cpp" />	
+<ClCompile Include = "..\src\sxApplication\sxMain.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\Command\UTest\sxCUTestCommand.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\Command\sxCDrawCommand.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\Command\sxCSwapCommand.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\State\sxCCameraState.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\State\sxCLightState.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\State\sxCMaterialState.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\State\sxCRenderTargetState.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\State\sxCTopologyState.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\State\sxCTransformState.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\State\sxCVertexBufferState.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\UTest\sxCCommandBufferUTest.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\UTest\sxCCommandLockerUTest.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\UTest\sxCDeviceUTest.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\UTest\sxCStateCacheUTest.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\sxCCommandBuffer.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\sxCCommandLocker.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\sxCContext.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\sxCDevice.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\sxCDriverStatistics.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\sxCFactorySelector.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\sxCStateCache.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\sxICommand.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\sxIObject.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Client\sxIState.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\D3d9\Command\sxCD3d9DrawCommand.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\D3d9\Command\sxCD3d9SwapCommand.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\D3d9\State\sxCD3d9CameraState.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\D3d9\State\sxCD3d9LightState.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\D3d9\State\sxCD3d9MaterialState.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\D3d9\State\sxCD3d9RenderTargetState.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\D3d9\State\sxCD3d9TopologyState.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\D3d9\State\sxCD3d9TransformState.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\D3d9\State\sxCD3d9VertexBufferState.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\D3d9\dxerr.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\D3d9\sxCD3d9Device.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\D3d9\sxCD3d9Factory.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\D3d9\sxCD3d9GpuTimer.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\D3d9\sxCD3d9StateShadow.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\D3d9\sxCD3d9TextRenderer.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\D3d9\sxD3d9.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\D3d9\sxID3d9ResetListener.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\Interface\sxIServerCommand.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\Interface\sxIServerDevice.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\Interface\sxIServerFactory.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\Interface\sxIServerObject .cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\Interface\sxIServerState.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\UTest\Command\sxCUTestServerCommand.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\UTest\State\sxCUTestRenderTargetState.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\UTest\sxCUTestDevice.cpp" />	
+<ClCompile Include = "..\src\sxDriver\Server\UTest\sxCUTestFactory.cpp" />	
+<ClCompile Include = "..\src\sxKernel\Math\sxCFloat3.cpp" />	
+<ClCompile Include = "..\src\sxKernel\Math\sxCFloat4.cpp" />	
+<ClCompile Include = "..\src\sxKernel\Thread\sxCAtomicInt.cpp" />	
+<ClCompile Include = "..\src\sxKernel\Thread\sxCCondition.cpp" />	
+<ClCompile Include = "..\src\sxKernel\Thread\sxCMutex.cpp" />	
+<ClCompile Include = "..\src\sxKernel\Thread\sxCThread.cpp" />	
+<ClCompile Include = "..\src\sxKernel\UnitTest\sxUnitTest.cpp" />	
+<ClCompile Include = "..\src\sxKernel\sxAssertion.cpp" />	
+<ClCompile Include = "..\src\sxKernel\sxCTSmartPtr.cpp" />	
+<ClCompile Include = "..\src\sxKernel\sxCTime.cpp" />	
+<ClCompile Include = "..\src\sxKernel\sxIMain.cpp" />	
+<ClCompile Include = "..\src\sxKernel\sxLog.cpp" />	
+<ClCompile Include = "..\src\sxKernel\sxMemory.cpp" />	
+<ClCompile Include = "..\src\sxKernel\sxRegistration.cpp" />
+</ItemGroup></Project> 
